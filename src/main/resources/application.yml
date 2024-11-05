@@ -1,0 +1,39 @@
+
+
+spring:
+  application:
+    name: community
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate.hibernate.format_sql: true
+      hibernate.hibernate.default_batch_fetch_size: 100
+  data:
+    rest:
+      base-path: /api
+      detection-strategy:
+  h2:
+    console:
+      enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    com.community: debug
+    org.springframework: debug
+    org.hibernate.type.descriptor.sql: trace
+
+debug: false
