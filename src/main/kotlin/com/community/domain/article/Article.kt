@@ -16,5 +16,4 @@ class Article(
     val title: String = "",
     @Column(nullable = false)
     val content: String = "",
-    val hashTag: String = "",
 ) : BaseEntity()

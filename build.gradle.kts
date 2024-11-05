@@ -65,7 +65,7 @@ tasks {
             showStackTraces = true
 
             // Change to `true` for more verbose test output
-            showStandardStreams = true
+            showStandardStreams = false
         }
     }
     ktlint {

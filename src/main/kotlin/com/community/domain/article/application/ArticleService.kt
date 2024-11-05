@@ -1,16 +1,19 @@
 package com.community.domain.article.application
 
+import com.community.domain.article.ArticleRepository
 import com.community.domain.article.web.ArticleResponse
 import org.springframework.stereotype.Service
 
 @Service
-class ArticleService {
-    fun getArticles(): List<ArticleResponse>? =
-        listOf(
+class ArticleService(
+    private val articleRepository: ArticleRepository,
+) {
+    fun getArticles(): List<ArticleResponse> =
+        articleRepository.findAll().map {
             ArticleResponse(
-                id = 1,
-                title = "title",
-                content = "content",
-            ),
-        )
+                id = it.id,
+                title = it.title,
+                content = it.content,
+            )
+        }
 }
