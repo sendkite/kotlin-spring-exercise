@@ -1,5 +1,6 @@
-package com.community.domain
+package com.community.domain.article
 
+import com.community.domain.BaseEntity
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue

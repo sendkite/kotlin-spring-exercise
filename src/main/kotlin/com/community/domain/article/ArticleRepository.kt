@@ -1,4 +1,4 @@
-package com.community.domain
+package com.community.domain.article
 
 import org.springframework.data.jpa.repository.JpaRepository
 

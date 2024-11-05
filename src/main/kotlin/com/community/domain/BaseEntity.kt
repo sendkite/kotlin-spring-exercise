@@ -1,6 +1,6 @@
 package com.community.domain
 
-import com.community.enums.EntityState
+import com.community.global.enums.EntityState
 import jakarta.persistence.EnumType
 import jakarta.persistence.Enumerated
 import jakarta.persistence.MappedSuperclass
