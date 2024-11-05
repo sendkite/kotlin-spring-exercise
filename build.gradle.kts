@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+
 plugins {
     kotlin("jvm") version "1.9.25"
     kotlin("plugin.spring") version "1.9.25"
@@ -13,6 +15,13 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
     }
+}
+
+allOpen {
+    annotation("jakarta.persistence.Entity")
+    annotation("jakarta.persistence.MappedSuperclass")
+    annotation("jakarta.persistence.Embeddable")
+    annotation("org.springframework.data.mongodb.core.mapping.Document")
 }
 
 repositories {
@@ -46,6 +55,17 @@ tasks {
     }
     test {
         useJUnitPlatform()
+        testLogging {
+            events("passed", "skipped", "failed") // , "standardOut", "standardError"
+
+            showExceptions = true
+            exceptionFormat = TestExceptionFormat.FULL
+            showCauses = true
+            showStackTraces = true
+
+            // Change to `true` for more verbose test output
+            showStandardStreams = true
+        }
     }
     ktlint {
         verbose.set(true)
