@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
+private val logger = KotlinLogging.logger {}
+
 @RestController
 @RequestMapping("/articles")
 class ArticleController(
     private val articleService: ArticleService,
 ) {
-    private val logger = KotlinLogging.logger {}
+
 
     @GetMapping
     fun getArticles(): ResponseEntity<List<ArticleResponse>> {
