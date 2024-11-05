@@ -17,10 +17,6 @@ spring:
     properties:
       hibernate.hibernate.format_sql: true
       hibernate.hibernate.default_batch_fetch_size: 100
-  data:
-    rest:
-      base-path: /api
-      detection-strategy:
   h2:
     console:
       enabled: false
