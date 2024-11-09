@@ -14,8 +14,6 @@ private val logger = KotlinLogging.logger {}
 class ArticleController(
     private val articleService: ArticleService,
 ) {
-
-
     @GetMapping
     fun getArticles(): ResponseEntity<List<ArticleResponse>> {
 

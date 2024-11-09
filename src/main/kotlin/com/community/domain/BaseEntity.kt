@@ -7,7 +7,7 @@ import jakarta.persistence.MappedSuperclass
 import java.time.Instant
 
 @MappedSuperclass
-class BaseEntity(
+abstract class BaseEntity(
     @Enumerated(EnumType.STRING)
     val state: EntityState = EntityState.ACTIVE,
     val createdAt: Instant = Instant.now(),
