@@ -1,4 +1,4 @@
-package com.community.domain.member
+package com.community.domain.member.domain
 
 import com.community.domain.BaseEntity
 import jakarta.persistence.Column
@@ -21,4 +21,16 @@ class Member(
     var email: String = "",
     @Column(nullable = false)
     var lastLoginAt: Instant = Instant.now(),
-) : BaseEntity()
+) : BaseEntity() {
+    companion object {
+        fun create(
+            loginId: String,
+            passwordHash: String,
+            email: String,
+        ): Member = Member(loginId = loginId, passwordHash = passwordHash, email = email)
+    }
+
+    fun updateLastLoginAt() {
+        lastLoginAt = Instant.now()
+    }
+}

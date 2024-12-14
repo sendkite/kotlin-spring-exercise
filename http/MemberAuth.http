@@ -1,0 +1,11 @@
+### 회원가입
+POST http://127.0.0.1:8080/v1/auths/signup
+Content-Type: application/json
+
+{
+  "email": "",
+  "password": "1234",
+  "loginId": "sendkite"
+}
+
+###

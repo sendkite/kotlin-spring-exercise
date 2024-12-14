@@ -16,9 +16,7 @@ class ArticleController(
 ) {
     @GetMapping
     fun getArticles(): ResponseEntity<List<ArticleResponse>> {
-
         logger.info { "info log test" }
-
         return ResponseEntity.ok(articleService.getArticles())
     }
 }
