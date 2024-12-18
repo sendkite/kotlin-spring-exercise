@@ -1,6 +1,5 @@
-package com.community.domain.member.application
+package com.community.domain.member.validation
 
-import com.community.domain.member.annotation.EmailUnique
 import com.community.domain.member.domain.MemberRepository
 import jakarta.validation.ConstraintValidator
 import jakarta.validation.ConstraintValidatorContext

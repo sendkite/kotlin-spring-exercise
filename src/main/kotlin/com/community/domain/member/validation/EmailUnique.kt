@@ -1,6 +1,5 @@
-package com.community.domain.member.annotation
+package com.community.domain.member.validation
 
-import com.community.domain.member.application.EmailUniqueValidator
 import jakarta.validation.Constraint
 import jakarta.validation.Payload
 import kotlin.reflect.KClass
