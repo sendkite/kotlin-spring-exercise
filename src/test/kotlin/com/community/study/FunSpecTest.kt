@@ -30,7 +30,7 @@ class FunSpecTest :
                     shouldThrow<StringIndexOutOfBoundsException> {
                         str.substring(7, 5)
                     }
-                exception.message shouldBe "begin 7, end 5, length 13"
+                exception.message shouldBe "Range [7, 5) out of bounds for length 13"
             }
         }
     })
