@@ -1,1 +1,0 @@
-insert into article (id, title, content, state, created_at, created_by, modified_at, modified_by) values (1, 'title1', 'content1', 'ACTIVE', '2020-01-01 00:00:00', 1, '2020-01-01 00:00:00', 1);

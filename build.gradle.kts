@@ -38,6 +38,13 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
+    // security
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("io.jsonwebtoken:jjwt:0.12.5")
+
+    // // doc
+    // implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0")
+
     // logging
     implementation("io.github.oshai:kotlin-logging-jvm:7.0.0")
 
